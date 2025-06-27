@@ -24,7 +24,6 @@ pipeline{
         stage("Make Docker Image"){
             steps{
                 echo "========Build========"
-                sh 'echo "Build by Jenkins Build# $BUILD_ID" >> index.html'
                 sh 'docker build -t site_on_docker:gitlab .'
                  }
          }
